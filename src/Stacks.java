@@ -1,10 +1,12 @@
 import java.util.Arrays;
 public class Stacks {
 	private int max, top=-1;
-	private Stacks(char[] arr) {
+	char[] stack;
+	
+	public Stacks(char[] arr) {
 		max=arr.length;
+		stack = new char[max];		
 	}
-	char[] stack = new char[max];		
 	
 	public void push(char data) {
 		if(top==max-1) {
@@ -32,10 +34,6 @@ public class Stacks {
 		}
 //		System.out.println("popped from stack");
 		return data;
-	}
-	
-	public void display() {
-		System.out.println(Arrays.toString(stack).replace("[", "").replace("]", "").replace(",", ""));	
 	}
 
 }

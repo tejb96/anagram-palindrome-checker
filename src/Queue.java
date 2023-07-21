@@ -1,12 +1,13 @@
 import java.util.Scanner;
 public class Queue {
 	private int max, head=-1,tail=-1;
+	char[] queue;
 	
 	public Queue(char[] a) {
 		max=a.length;
+		queue=new char[max];
 	}
 	
-	char[] queue=new char[max];
 	
 	public void enqueue(char data) {
 		if(tail==max-1) {
@@ -33,7 +34,7 @@ public class Queue {
 		else {
 			data=queue[head];
 			queue[head]=0;
-			head+=head;
+			head+=1;
 		}
 		return data;
 	}
