@@ -1,9 +1,20 @@
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * The Words class contains methods to check whether a given array of words are anagrams and palindromes.
+ * 
+ * @author Tej
+ * 
+ */
 public class Words {
 	public Stacks stacks;
 	public Queue q;
 	
+	 /**
+     * Checks if the given array of words are anagrams or not and prints the result.
+     *
+     * @param wordArray The array of words to check for anagrams.
+     */
 	public void anagramChecker(String[] wordArray) {
 		String[] result = new String[wordArray.length];
 		
@@ -30,12 +41,16 @@ public class Words {
 		}
 	}
 	
-	
+	 /**
+     * Checks if the given array of words are palindromes or not and prints the result.
+     *
+     * @param wordArray The array of words to check for palindromes.
+     */
 	public void palindromeChecker(String[] wordArray) {
 		String[] result=new String[wordArray.length];
 		
 		for(int i=0;i<wordArray.length;i++) {
-			result[i]="Yes";
+			result[i]="Yes"; 
 		}
 		
 		for(int i=0;i<wordArray.length;i++) {
@@ -50,7 +65,7 @@ public class Words {
 			
 			for(int j=0;j<word.length;j++) {
 				if(stacks.pop()!=q.dequeue()) {
-					result[i]="No";
+					result[i]="No";  
 				}
 			}
 		}
